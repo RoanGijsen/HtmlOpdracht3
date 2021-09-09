@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+</head>
+
+
+<body>
+
+Typ een woord <input id="TypIets" type="text"/>
+Typ een letter <input id="TypIets2" type="text"/>
+
+<button id="checkLetter" onclick="checkLetter()">Check Letter</button>
+
+</body>
+</html>
+
+<script>
+function checkLetter()
+{
+    var resultaat = 0;
+    var h = document.getElementById('TypIets').value;
+    var x = document.getElementById('TypIets2').value;
+
+    for (i = 0; i < h.length; i++)
+    {
+        if (h[i] == x)
+        {
+           resultaat ++;
+        }
+    }
+    alert("De letter " + x + " is " + resultaat + " keer aanwezig in " + h );
+}
+
+</script>
